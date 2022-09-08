@@ -1,0 +1,30 @@
+add_namespace = lottoman
+
+country_event = {
+	id = lottoman.1
+	title = lottoman.1.t
+	desc = lottoman.1.d
+	picture = GFX_news_event_002
+	
+	is_triggered_only = yes
+	trigger = {
+	tag = LOT
+	AND = {
+	date > 1936.2.1
+	}
+	}
+
+	mean_time_to_happen = {days = 7}
+	
+	option = { # Push back
+		name = Okay
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+		target = CHI
+		type = annex_everything
+		}
+		
+		
+	}
+	
+}
